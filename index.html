@@ -23,7 +23,7 @@
       // Решение:
       let numWi = Number(prompt("Введите ширину", "0"));
       let numHi = Number(prompt("Введите высоту", "0"));
-      let square = (numWi + numHi) * 2;
+      let square = numWi * numHi;
 
       console.log(square);
       console.log(Math.round(square));
@@ -60,9 +60,10 @@
       console.log(developer);
       developer.bonus = developer.bonus * 1.2;
       console.log(`Увеличенная премия: ${developer.bonus}`);
-      coffeeM = 5200;
+      let coffeeM = 5200;
+      developer.bonus -= coffeeM;
       console.log(
-        "Остаток премии после вычета кофемашины " + (developer.bonus - coffeeM)
+        `"Остаток премии после вычета кофемашины: " ${developer.bonus}`
       );
       console.log(`Имя: ${
         developer.name
